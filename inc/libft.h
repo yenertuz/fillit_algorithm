@@ -3,6 +3,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <fcntl.h>
 
 # define MALLOC(p1, p2) (p1*)malloc(sizeof(p1) * p2);
 # define MEMALLOC(p1, p2) (p1*)ft_memalloc(sizeof(p1) * p2);
@@ -97,6 +98,8 @@ void			ft_lstiter(t_list *s, void (*f)(t_list *e));
 t_list			*ft_lstmap(t_list *s, t_list* (*f)(t_list *e));
 
 int				ft_gnl(int const fd, char **line);
+
+char			*ft_readfile(char const *p);
 
 
 /*
