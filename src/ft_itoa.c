@@ -16,11 +16,12 @@ static int	get_abs(int n)
 
 char		*ft_itoa(int n)
 {
-	char			buffer[11];
+	char			buffer[12];
 	unsigned int	i;
 	unsigned int	n_copy;
 
 	ft_memset(buffer, ' ', 11);
+	buffer[11] = 0;
 	n_copy = n;
 	i = 0;
 	if (n == 0)
@@ -31,7 +32,7 @@ char		*ft_itoa(int n)
 		n /= 10;
 		i++;
 	}
-	if (n < 0)
+	if (n_copy < 0)
 		buffer[10 - i] = '-';
 	return (ft_strtrim(buffer));
 }

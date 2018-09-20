@@ -8,11 +8,12 @@ char	*ft_readfile(const char *p)
 	char	*t;
 
 	fd = open(p, O_RDONLY);
+	r = ft_strdup("");
 	if (fd == -1)
-		return (0);
+		exit(-1);
 	while (read(fd, &b, 2400))
 	{
-		t = ft_strcat(b, r);
+		t = ft_strjoin(r, b);
 		free(r);
 		r = t;
 	}

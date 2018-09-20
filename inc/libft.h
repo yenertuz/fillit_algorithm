@@ -5,8 +5,14 @@
 # include <stdlib.h>
 # include <fcntl.h>
 
-# define MALLOC(p1, p2) (p1*)malloc(sizeof(p1) * p2);
-# define MEMALLOC(p1, p2) (p1*)ft_memalloc(sizeof(p1) * p2);
+# define MALLOC(p1, p2) (p1*)malloc(sizeof(p1) * p2)
+# define MEMALLOC(p1, p2) (p1*)ft_memalloc(sizeof(p1) * p2)
+# define PC(p) ft_putchar(p)
+# define PS(p) ft_putstr(p)
+# define PE(p) ft_putendl(p)
+# define PN(p) ft_putnbr(p)
+# define NL ft_putchar('\n')
+
 
 typedef struct		s_ilst
 {
