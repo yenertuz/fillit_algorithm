@@ -7,7 +7,7 @@ char	*ft_strdup(const char *s)
 
 	n = ft_strlen(s);
 	d = (char*)malloc(sizeof(char) * (n + 1));
-	ft_memcpy((void*)(d), (const void*)(s), n);
+	ft_strcpy(d, s);
 	d[n] = 0;
 	return (d);
 }
