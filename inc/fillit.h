@@ -22,7 +22,10 @@ t_data				*data_new(char const *path);
 void				data_fetch(t_data *data, const char *file, unsigned int l);
 
 t_tetri				*tetri_get_last(t_data *data);
-t_tetri				*tetri_from_index(t_data *data);
+t_tetri				*tetri_from_index(t_data *data, unsigned int i);
+void				tetri_process_brick(t_tetri tetri, char const *s,
+						unsigned int i);
+
 
 void				data_solve(t_data *data);
 
