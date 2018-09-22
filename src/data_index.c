@@ -13,7 +13,10 @@ static void	tetri_index(t_tetri *tetri)
 	char			c;
 
 	if (ft_strlen(tetri->buffer) != 20)
+	{
+		PN(tetri->index); NL;
 		ft_error("error: strlen");
+	}
 	s = tetri->buffer;
 	i = 0;
 	while (s[i])
@@ -40,7 +43,7 @@ void		data_index(t_data *data)
 	while (i < tetri_count)
 	{
 		tetri = tetri_from_index(data, i);
-		tetri->index = i;
+		PN(i); PS("--@"); NL;
 		tetri_index(tetri);
 		i++;
 	}
