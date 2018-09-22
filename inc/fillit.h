@@ -5,26 +5,26 @@
 
 typedef struct		s_tetri
 {
-	char			**split;
-	char			*tetri;
+	unsigned int	index;
 	unsigned int	rows[4];
 	unsigned int	columns[4];
 	unsigned int	brick_count;
-	unsigned int	width;
-	unsigned int	len;
+	char			buffer[20];
 }					t_tetri;
 
 typedef struct		s_data
 {
-	char			*file;
-	unsigned int	len;
 	t_tetri			tetris[26];
 	unsigned int	tetri_count;
 }					t_data;
 
-t_data				*data_new(char const *p);
-void				data_delete(t_data *data);
-void				data_analyze(t_data *data);
-void				data_index(t_data *data);
+t_data				*data_new(char const *path);
+void				data_fetch(t_data *data, const char *file, unsigned int l);
+
+t_tetri				*tetri_get_last(t_data *data);
+t_tetri				*tetri_from_index(t_data *data);
+
+void				data_solve(t_data *data);
+
 
 #endif
