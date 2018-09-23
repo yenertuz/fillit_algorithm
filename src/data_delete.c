@@ -10,13 +10,7 @@ void	data_delete(t_data *data)
 	l = data->count;
 	ptr = data->split;
 	if (data->split)
-	{
-		while (i < l)
-		{
-			free(ptr[i]);
-			i++;
-		}
-	}
+		free_cdp()
 	free(data->split);
 	if (data->tetris != 0)
 		free(data->tetris);
