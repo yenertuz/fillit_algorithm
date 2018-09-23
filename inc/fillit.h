@@ -5,30 +5,30 @@
 
 typedef struct		s_tetri
 {
-	unsigned int	index;
 	unsigned int	rows[4];
 	unsigned int	columns[4];
 	unsigned int	brick_count;
-	char			buffer[20];
+	unsigned int	index;
 }					t_tetri;
 
 typedef struct		s_data
 {
-	t_tetri			tetris[26];
-	unsigned int	tetri_count;
+	char			*file;
+	unsigned int	len;
+	unsigned int	count;
+	char			**split;
+	t_tetri			*tetris;
 }					t_data;
 
-t_data				*data_new(char const *path);
-void				data_fetch(t_data *data, const char *file, unsigned int l);
-void				data_index(t_data *data);
-
-t_tetri				*tetri_get_last(t_data *data);
-t_tetri				*tetri_from_index(t_data *data, unsigned int i);
-void				tetri_process_brick(t_tetri *tetri, char const *s,
-						unsigned int i);
-
+t_data				*data_new(char const *p);
+void				data_delete(t_data *data);
 
 void				data_solve(t_data *data);
+void				data_split_tetriminos(t_data *data);
+void				data_process_tetriminos(t_data *data);
+void				data_trim_tetriminos(t_data *data);
 
+void				tetri_process_brick(t_tetri *t, char const *s,
+						unsigned int i);
 
 #endif

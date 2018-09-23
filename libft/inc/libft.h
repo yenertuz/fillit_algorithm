@@ -12,6 +12,8 @@
 # define PE(p) ft_putendl(p)
 # define PN(p) ft_putnbr(p)
 # define NL ft_putchar('\n')
+# define ER(p) ft_error(p)
+# define DB ft_putstr("\nDEBUG\n");
 
 
 typedef struct		s_ilst
@@ -106,6 +108,7 @@ t_list			*ft_lstmap(t_list *s, t_list* (*f)(t_list *e));
 int				ft_gnl(int const fd, char **line);
 
 char			*ft_readfile(char const *p);
+void			free_cdp(char **dp);
 
 
 /*

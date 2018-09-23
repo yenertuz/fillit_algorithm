@@ -9,7 +9,7 @@ char	*ft_readfile(const char *p)
 
 	fd = open(p, O_RDONLY);
 	if (fd == -1)
-		exit(-1);
+		ER("error: cannot open file");
 	ft_bzero(b, 1200);
 	r = ft_strdup("");
 	while (read(fd, b, 1200))
