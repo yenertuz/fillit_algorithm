@@ -25,8 +25,6 @@ typedef struct		s_data
 	unsigned int	currently_placing;
 	unsigned int	map_row;
 	unsigned int	map_column;
-	unsigned int	last_row;
-	unsigned int	last_column;
 }					t_data;
 
 t_data				*data_new(char const *p);
