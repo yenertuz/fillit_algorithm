@@ -35,10 +35,12 @@ void				data_recurse(t_data *data)
 	data_draw_maps(data);
 	while (data->currently_placing != data->count)
 	{
-		if (data_place(data) == 1)
-			data_place_success(data);
+		if (data_check_map_end(data) == 1)
+			data_retrace(data);
+		else if (data_check_if_placeable(data) == 1)
+			data_place(data);
 		else
-			data_place_fail(data);
+			data_fail(data);
 	}
 	//print_map(data);
 }
