@@ -11,7 +11,7 @@ int	data_check_if_placeable(t_data *data)
 	map = data->split;
 	i = 0;
 	n[2] = data->map_size;
-	while (i < 0)
+	while (i < 4)
 	{
 		n[0] = data->map_row + tetri->rows[i];
 		n[1] = data->map_column + tetri->columns[i];

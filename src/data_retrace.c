@@ -16,6 +16,10 @@ static void	erase_last_placed(t_data *data)
 		map[n[1]][n[2]] = '.';
 		n[0]++;
 	}
+	data->currently_placing--;
+	data->map_row = last_placed->placed_row;
+	data->map_column = last_placed->placed_column;
+	data_advance(data);
 }
 
 static void	expand_map(t_data *data)

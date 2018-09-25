@@ -32,7 +32,6 @@ void		data_draw_maps(t_data *data)
 		data->split = 0;
 	}
 	s = generate_string(data->map_size);
-	PE("@@"); PS(s); PE("@@");
 	data->split = ft_strsplit(s, '\n');
 	free(s);
 }

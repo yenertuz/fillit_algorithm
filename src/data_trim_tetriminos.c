@@ -1,5 +1,5 @@
 #include "fillit.h"
-}
+
 
 static void	trim_tetrimino(t_tetri *t)
 {
@@ -14,6 +14,7 @@ static void	trim_tetrimino(t_tetri *t)
 	{
 		t->rows[i] -= row_min;
 		t->columns[i] -= column_min;
+		i++;
 	}
 }
 

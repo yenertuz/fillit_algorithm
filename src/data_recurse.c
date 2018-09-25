@@ -27,8 +27,6 @@ static unsigned int	get_minimum_map_size(unsigned int count)
 
 void				data_recurse(t_data *data)
 {
-	int	place_result;
-
 	free_tetri_strings(data);
 	data->split = 0;
 	data->map_size = get_minimum_map_size(data->count);
@@ -40,7 +38,7 @@ void				data_recurse(t_data *data)
 		else if (data_check_if_placeable(data) == 1)
 			data_place(data);
 		else
-			data_fail(data);
+			data_advance(data);
 	}
-	//print_map(data);
+	data_print(data);
 }

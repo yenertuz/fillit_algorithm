@@ -40,9 +40,9 @@ void				data_draw_maps(t_data *data);
 int					data_check_map_end(t_data *data);
 int					data_check_if_placeable(t_data *data);
 void				data_place(t_data *data);
-void				data_fail(t_data *data);
 void				data_retrace(t_data *data);
-void				data_advanced(t_data *data);
+void				data_advance(t_data *data);
+void				data_print(t_data *data);
 
 void				tetri_process_brick(t_tetri *t, char const *s,
 						unsigned int i);
