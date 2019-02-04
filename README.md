@@ -1,7 +1,5 @@
 # Fillit_Algorithm  
 
-##### Header
-
 __Author:__ Yener Tuz  
 __Creation date__: 9/24/2018  
 
