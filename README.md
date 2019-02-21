@@ -1,8 +1,5 @@
 # Fillit_Algorithm  
 
-__Author:__ Yener Tuz  
-__Creation date__: 9/24/2018  
-
 * A 42USA project
 
 ##### Intro
@@ -22,3 +19,6 @@ gcc, sh, a terminal, `<unist.d>`, `<stdlib.h>`, `<string.h>`
 * Takes one argument, __input_file_path,__ which is the path of the file that contains tetriminos  
 
 ![Alt text](/download.png?raw=true "Example")
+
+__Author:__ Yener Tuz  
+__Creation date__: 9/24/2018  
