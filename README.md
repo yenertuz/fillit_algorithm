@@ -21,4 +21,4 @@ gcc, sh, a terminal, `<unist.d>`, `<stdlib.h>`, `<string.h>`
 ![Alt text](/download.png?raw=true "Example")
 
 __Author:__ Yener Tuz  
-__Creation date__: 9/24/2018  
+__Creation date__: 9/24/2018
